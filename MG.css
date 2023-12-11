@@ -1,0 +1,16 @@
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+input:focus {
+    background-color: orange;
+}
+
+body {
+    background-color: teal;
+    font-family: "Space Mono", monospace;
+}
+

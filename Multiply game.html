@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title>Multiplication game</title>
+        <link rel="stylesheet" href="../styles/MG.css">
+    </head>
+
+    <body onload="document.getElementById('Formular').innerHTML = getRndInteger(0,10)">
+    <!--List of the input field-->
+        <div id = 'form'>
+            <form>
+                <label for="formFormular" id ="Formular">Java script is not working</label>
+                <input type="number" id="number" name="formFormular" min="0" max ="100" value="">
+
+                <input type="button" id="button" name="formButton" value="Check" 
+                onclick ="Check(number)"> 
+
+                <input  onclick="document.getElementById('Formular').innerHTML = getRndInteger(0,10)" 
+                type="button" id="button" name="formButton" value="Generate">
+
+            </form>
+        </div>
+    <!--Result-->
+        <div id = 'result'>
+            <p>Let's solve the equation </p>
+        </div>
+    <!--Generating random number-->
+        <script>
+        let output = "";
+        function getRndInteger(min, max) {
+            a = Math.floor(Math.random() * (max - min + 1) ) + min;
+            b = Math.floor(Math.random() * (max - min + 1) ) + min;
+            return output = a + ' * ' + b  + ' = ';
+        }
+        document.getElementById('Formular').innerHTML = output;
+
+        function Check(number) {
+            let UI = document.getElementById('number').value;
+            if (parseInt(UI) === a * b) {
+                answer = 'You are right';
+            } else {
+                answer = 'You are wrong';
+            }
+            document.getElementById('result').innerHTML = answer;
+        }
+        
+        </script>
+    </body>
+</html>
